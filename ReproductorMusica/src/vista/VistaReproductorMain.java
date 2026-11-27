@@ -47,7 +47,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.JInternalFrame;
 import java.awt.Canvas;
 
-public class Main {
+public class VistaReproductorMain {
 
 	private JFrame frmReproductorDeMsica;
 	private JTextField textField;
@@ -76,7 +76,7 @@ public class Main {
 		}
 		EventQueue.invokeLater(() -> {
 			try {
-				Main window = new Main();
+				VistaReproductorMain window = new VistaReproductorMain();
 				window.frmReproductorDeMsica.setVisible(true);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -84,13 +84,13 @@ public class Main {
 		});
 	}
 
-	public Main() {
+	public VistaReproductorMain() {
 		initialize();
 	}
 
 	private void initialize() {
 		frmReproductorDeMsica = new JFrame();
-		frmReproductorDeMsica.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/imagenes/main.png")));
+		frmReproductorDeMsica.setIconImage(Toolkit.getDefaultToolkit().getImage(VistaReproductorMain.class.getResource("/imagenes/main.png")));
 		frmReproductorDeMsica.setTitle("Reproductor de Música");
 		frmReproductorDeMsica.setBounds(new Rectangle(100, 100, 1180, 680));
 		frmReproductorDeMsica.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,11 +127,11 @@ public class Main {
 		panelNav.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 
 		JButton btnAtras = new JButton("");
-		btnAtras.setIcon(new ImageIcon(Main.class.getResource("/imagenes/go-previous.png")));
+		btnAtras.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/go-previous.png")));
 		panelNav.add(btnAtras);
 
 		JButton btnAdelante = new JButton("");
-		btnAdelante.setIcon(new ImageIcon(Main.class.getResource("/imagenes/go-next.png")));
+		btnAdelante.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/go-next.png")));
 		panelNav.add(btnAdelante);
 
 		// --- BOTÓN ALTERNAR LOCAL / LISTENBRAINZ ---
@@ -314,7 +314,7 @@ public class Main {
 		panelInfoActual.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 
 		JLabel lblCaratulaMini = new JLabel("");
-		lblCaratulaMini.setIcon(new ImageIcon(Main.class.getResource("/imagenes/disc-small.png")));
+		lblCaratulaMini.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/disc-small.png")));
 		panelInfoActual.add(lblCaratulaMini);
 
 		lblInfoPista = new JLabel("Sin reproducción");
@@ -352,24 +352,24 @@ public class Main {
 		panelBotones.setLayout(new FlowLayout(FlowLayout.CENTER, 6, 5));
 
 		JButton btnRepetir = new JButton("");
-		btnRepetir.setIcon(new ImageIcon(Main.class.getResource("/imagenes/control_repeat_blue.png")));
+		btnRepetir.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/control_repeat_blue.png")));
 		panelBotones.add(btnRepetir);
 
 		JButton btnDetener = new JButton("");
-		btnDetener.setIcon(new ImageIcon(Main.class.getResource("/imagenes/Stop.png")));
+		btnDetener.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/Stop.png")));
 		panelBotones.add(btnDetener);
 
 		JButton btnAnterior = new JButton("");
-		btnAnterior.setIcon(new ImageIcon(Main.class.getResource("/imagenes/Previous1.png")));
+		btnAnterior.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/Previous1.png")));
 		panelBotones.add(btnAnterior);
 
 		JButton btnPlayPausa = new JButton("Reproducir");
 		btnPlayPausa.setIconTextGap(8);
-		btnPlayPausa.setIcon(new ImageIcon(Main.class.getResource("/imagenes/Play.png")));
+		btnPlayPausa.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/Play.png")));
 		panelBotones.add(btnPlayPausa);
 
 		JButton btnSiguiente = new JButton("");
-		btnSiguiente.setIcon(new ImageIcon(Main.class.getResource("/imagenes/Next.png")));
+		btnSiguiente.setIcon(new ImageIcon(VistaReproductorMain.class.getResource("/imagenes/Next.png")));
 		panelBotones.add(btnSiguiente);
 
 		JButton btnAleatorio = new JButton("Aleatorio");
